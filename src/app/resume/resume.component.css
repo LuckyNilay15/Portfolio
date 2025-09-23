@@ -1,0 +1,140 @@
+/* ===== Page background & typography ===== */
+:root{
+  --primary:#007bff;
+  --accent:#3498db;
+  --ink:#2c3e50;
+  --muted:#7f8c8d;
+  --soft:#f5f8ff;
+  --card:#ffffff;
+  --line:#e6eefb;
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  background: linear-gradient(180deg, #fafcff 0%, #f2f7ff 100%) fixed; /* subtle blue tint */
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optional: softly lift the main container */
+.container.text-center{
+  background: rgba(255,255,255,.6);
+  backdrop-filter: blur(3px);
+  border-radius: 16px;
+  padding-bottom: 16px;
+}
+
+/* ===== Accordion header polish (keeps your colors) ===== */
+.accordion-group::ng-deep .card-header{
+  background: linear-gradient(135deg, var(--primary) 0%, #0b6ae6 100%);
+  border: none;
+}
+.accordion-group::ng-deep .btn-link{
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+.accordion-group::ng-deep .btn-link::after{
+  content: '▾';
+  float: right;
+  transition: transform .25s ease;
+}
+.accordion-group::ng-deep .btn-link.collapsed::after{
+  transform: rotate(-90deg);
+}
+
+/* ===== Work Experience (timeline feel + better blocks) ===== */
+.job-title{
+  position: relative;
+  padding-left: 26px;            /* room for the dot */
+}
+.job-title::before{
+  content:'';
+  position: absolute;
+  left: 6px; top: .65em;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(52,152,219,.18);
+}
+
+.company{
+  margin-left: 26px;
+}
+
+.date{
+  display: inline-block;
+  margin-left: 26px;
+  background: #eef5ff;
+  border: 1px solid #cfe3ff;
+  color: #1f3b63;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+/* Your existing job-description is good—just a tiny lift */
+.job-description{
+  margin-left: 26px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(13, 57, 121, 0.06);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.job-description:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(13, 57, 121, 0.12);
+  border-color: var(--primary);
+}
+
+/* ===== Education cards (refine hover) ===== */
+.education-item{
+  background: var(--card);
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+}
+.education-item:hover{
+  transform: translateY(-2px) scale(1.02); /* a touch more lively */
+  box-shadow: 0 12px 28px rgba(0,0,0,.12);
+  border-color: var(--primary);
+}
+
+/* ===== Card spacing inside accordion ===== */
+.accordion-group::ng-deep .card-body{
+  background: #fff;
+  padding: 22px 20px 12px;
+}
+
+/* ===== Micro animation (applies to most blocks) ===== */
+@keyframes fadeUp{
+  from{opacity:0; transform: translateY(6px)}
+  to{opacity:1; transform:none}
+}
+.job-title,.company,.date,.job-description,.education-item{
+  animation: fadeUp .45s ease both;
+}
+
+/* ===== Mobile tweaks ===== */
+@media (max-width: 576px){
+  .job-title{ font-size: 1.25em; padding-left: 24px; }
+  .company,.date,.job-description{ margin-left: 24px; }
+}
+
+.skill-item {
+    background: linear-gradient(135deg, #6a8fdc 0%, #3a4a6b 100%);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 10px 10px 0; /* Add spacing between skills */
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+    display: inline-block;
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #3a4a6b 0%, #6a8fdc 100%);
+}

@@ -1,0 +1,30 @@
+<div class="container "> 
+    <div class="row">
+        <!-- About me -->
+        <div class="col-lg shadow border m-1" style="border-radius: 15px;">
+            <div class="text-center">
+                <h2>About Me</h2>
+                <div class="profile-picture"></div>
+                <br>
+                <p class="left-align">I am a passionate software developer with a strong focus on building impactful and scalable solutions. With a foundation in computer science and hands-on experience across full-stack development and machine learning, I enjoy turning ideas into products that solve real-world problems. Whether it’s crafting clean user interfaces , building reliable APIs , or experimenting with data pipelines and AI models, I bring both creativity and precision to my work.</p>
+            </div>
+        </div>
+        <!-- Featured projects -->
+        <div class="col-lg shadow border m-1" style="border-radius: 15px;">
+            <div class="text-center">
+                <h2>Featured Projects</h2>
+                <h4>{{featuredProject.name}}</h4>
+
+                <carousel>
+                    <div *ngFor="let picture of featuredProject.pictures">
+                        <slide>
+                            <img src="{{picture}}" alt="slide" style="display: flex; width: 80%; height: 80%; margin: auto;">
+                        </slide>
+                    </div>
+            </carousel>
+            <p class="mt-2">{{featuredProject.description}}</p>
+            <p>Visit the Project section to learn more!</p>
+            </div>
+        </div>
+    </div>
+</div>
