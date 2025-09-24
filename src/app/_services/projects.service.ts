@@ -15,7 +15,7 @@ export class ProjectsService {
       pictures: [
         'https://lh5.googleusercontent.com/p/AF1QipPSVcgXiZA16yXg-UkeA8ueOIVGP95cuO4VcDaQ=w1024-h960-p-k-no',
       ],
-      tags: [Tag.REACT, Tag.TYPESCRIPT, Tag.LLM]
+      tags: [Tag.REACT, Tag.LLM,Tag.Node,Tag.Express,Tag.MongoDB]
     },
     {
      id: 1,
@@ -37,7 +37,7 @@ export class ProjectsService {
       pictures: [
         'https://fekrait.com/uploads/topics/16716493448662.jpg' 
       ],
-      tags: [Tag.REACT, Tag.TYPESCRIPT]
+      tags: [Tag.REACT,Tag.Node,Tag.Express,Tag.MongoDB]
     },
     {
       id: 3,
