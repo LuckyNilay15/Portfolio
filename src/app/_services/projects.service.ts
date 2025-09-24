@@ -10,7 +10,7 @@ export class ProjectsService {
       id: 0,
       name: 'Recollect',
       summary: 'Full-stack reading & AI summarisation app with auth, notes, and responsive UI.',
-      description: 'React/Next.js app with Node/Express & MongoDB. Integrates Groq API to summarise text via chat, with secure short-notes management (save/view/delete). Deployed on Render/Netlify.',
+      description: 'A full-stack React application featuring a Node.js and Express backend with MongoDB as the database. The app integrates the Groq API to provide intelligent text summarization through an interactive chat interface. It offers a secure short-notes management system, allowing users to create, view, and delete concise notes with robust authentication and data protection. The frontend is built with React for a seamless user experience, while the backend handles API requests, user authentication, and data persistence. The entire project is deployed using Render for the backend services and Netlify for the frontend, ensuring scalable and reliable hosting.',
       projectLink: 'https://recollect15.netlify.app/',
       pictures: [
         'https://lh5.googleusercontent.com/p/AF1QipPSVcgXiZA16yXg-UkeA8ueOIVGP95cuO4VcDaQ=w1024-h960-p-k-no',
